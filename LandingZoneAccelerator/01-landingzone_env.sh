@@ -1,0 +1,40 @@
+#!/usr/bin/env bash
+# You need to run "source ./01-landingzone_env.sh" to ensure that the following environment variables take effect
+export SUBSCRIPTIONID='ab3c0724-d98d-4a74-917a-29a3ebe0f01e'
+export HUBRGNAME='hub-aro-rg'
+export SPOKERGNAME='spoke-aro-rg'
+export ARCRGNAME='arc-aro-rg'
+export AZFW_NAME='azfw'
+export BASTION_NAME='bastion-hub'
+export LOCATION='eastus'
+export AROCLUSTER='arocluster'
+export PULLSECRETLOCATION=@/Users/kevinye/Documents/KevinYe/Openshift/Code/pull-secret.txt
+export uniqueId=$RANDOM
+export ACR_NAME='aroacr'$uniqueId
+export COSMOSDB_NAME='cosmos'$uniqueId
+export KV_NAME='keyvault'$uniqueId
+export LAWORKSPACE_NAME='arolw'
+export AFD_NAME='aroafd'
+export AFD_PLS_NAME='aro-pls'
+export AFD_APP_CUSTOM_DOMAIN_NAME='ratingsapp-contoso-com' # Ex: ratingsapp-mydomain-com
+export ARO_APP_FQDN='ratingsapp.contoso.com' # Ex: ratingsapp.mydomain.com
+export ARO_AAD_APP_NAME='aro-aad-auth-sp-'$uniqueId
+# VNet Name and IP Addresses
+export HUBVNET_NAME='hub-vnet'
+export HUBVNET_PREFIX='10.0.0.0/16'
+export AZFWSUBNET_PREFIX='10.0.0.0/26'
+export AZUREBASTIONSUBNET_PREFIX='10.0.0.64/26'
+export VMSUBNET_PREFIX='10.0.1.0/24'
+export VMSUBNET_NAME=VM-Subnet
+export SPOKEVNET_NAME='aro-spoke-vnet'
+export MASTERAROSUBNET_NAME=master-aro-subnet
+export WORKERAROSUBNET_NAME=worker-aro-subnet
+export SPOKEVNET_PREFIX='10.1.0.0/16'
+export MASTERAROSUBNET_PREFIX='10.1.0.0/23'
+export WORKERAROSUBNET_PREFIX='10.1.2.0/23'
+export PRIVATERUNNERSUBNET_PREFIX='10.1.4.0/24'
+export PRIVATERUNNERSUBNET_NAME=PrivateRunner-subnet
+export APPGWSUBNET_PREFIX='10.1.5.0/27'
+export APPGWSUBNET_NAME=AppGW-subnet
+export PRIVATEENDPOINTSUBNET_PREFIX='10.1.6.0/25'
+export PRIVATEENDPOINTSUBNET_NAME='PrivateEndpoint-subnet'
